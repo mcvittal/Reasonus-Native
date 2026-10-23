@@ -105,6 +105,14 @@ void CSurf_FP_8_FaderManager::SetChannelMode(const ChannelMode channelMode, cons
             channelManager = new CSurf_FP_8_PluginLearnManager(tracks, navigator, context, m_midiout);
             break;
 
+        case FxParamMode:
+            context->SetPanEncoderMode(PanEncoderTrackPanMode);
+            context->ResetPanPushMode();
+            context->SetLastTouchedFxMode(false);
+            SetTracks();
+            channelManager = new CSurf_FP_8_FxParamManager(tracks, navigator, context, m_midiout);
+            break;
+
         case MenuMode:
             context->SetPanEncoderMode(PanEncoderMenuMode);
             SetTracks();
@@ -248,6 +256,17 @@ void CSurf_FP_8_FaderManager::HandleTouchButtonClick() {
         SetChannelMode(mode);
     } else {
         SetChannelMode(MenuMode);
+    }
+}
+
+/**
+ * Toggle the mode in which every fader controls an FX parameter on its own track
+ */
+void CSurf_FP_8_FaderManager::HandleFxParamMode() {
+    if (context->IsChannelMode(FxParamMode)) {
+        SetChannelMode(TrackMode, true);
+    } else {
+        SetChannelMode(FxParamMode, true);
     }
 }
 

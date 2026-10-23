@@ -485,6 +485,10 @@ public:
 
       } else {
           switch (script_command_id) {
+          case 600:
+              faderManager->HandleFxParamMode();
+              return true;
+
           case 501:
               faderManager->HandleTrackButtonClick(0x7f);
               return true;

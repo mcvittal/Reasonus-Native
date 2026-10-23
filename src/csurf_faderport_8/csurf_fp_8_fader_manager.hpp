@@ -3,6 +3,7 @@
 
 #include "csurf_fp_8_channel_manager.hpp"
 #include "csurf_fp_8_filter_manager.cpp"
+#include "csurf_fp_8_fx_param_manager.cpp"
 #include "csurf_fp_8_plugin_learn_manager.cpp"
 #include "csurf_fp_8_plugin_control_manager.cpp"
 #include "csurf_fp_8_menu_manager.cpp"
@@ -66,6 +67,8 @@ public:
     void HandleTouchButtonClick();
 
     void SetPluginControlMode();
+
+    void HandleFxParamMode();
 
     void HandleEncoderIncrement() const;
 

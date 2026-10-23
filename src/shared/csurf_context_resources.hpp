@@ -18,6 +18,7 @@ enum ChannelMode
     MixMode,
     PluginEditMode,
     PluginControlMode,
+    FxParamMode,
     MenuMode
 };
 

@@ -4,6 +4,7 @@ target_sources(${PROJECT_NAME}
         csurf_fp_8_channel_manager_resources.cpp
         csurf_fp_8_fader_manager.cpp
         csurf_fp_8_filter_manager.cpp
+        csurf_fp_8_fx_param_manager.cpp
         csurf_fp_8_general_control_manager.cpp
         csurf_fp_8_hui_plugins_manager.cpp
         csurf_fp_8_hui_receives_manager.cpp
