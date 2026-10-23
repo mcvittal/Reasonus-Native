@@ -6,6 +6,7 @@ target_sources(${PROJECT_NAME}
         action_fp_8_setting_fader_reset.cpp
         action_fp_8_setting_master_fader_mode.cpp
         action_fp_8_setting_momentary_mute_solo.cpp
+        action_fp_8_setting_script_command.cpp
         action_fp_8_setting_swap_shift_buttons.cpp
         action_fp_8_setting_untouch_last_touched_param.cpp
         action_fp_v2_setting_control_hidden_tracks.cpp

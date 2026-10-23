@@ -76,7 +76,7 @@ FetchContent_Declare(GSL
 
 FetchContent_Declare(mINI
         GIT_REPOSITORY "https://github.com/metayeti/mINI"
-        GIT_TAG "origin/master"
+        GIT_TAG "d882d7f4a42991fb3e4635eda8e8777e5b3cd153" # last commit before CMake 4.0 requirement
         SOURCE_DIR "${PROJECT_LIB_DIR}/mINI"
 )
 
